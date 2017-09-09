@@ -9,12 +9,8 @@ $(function () {
     });
   });
 
-// var hasBeenClicked = false;
-// $(document).click(function () {
-//     hasBeenClicked = true;
-// });
-
-// if (hasBeenClicked) {
-//     console.log("clicked");
-//     $(".dropContent").hide();
-// }
+window.onclick = function(e) {
+  if (!e.target.matches('.dropBtn')) { //if it wasn't the button that was pressed then...
+    $(".dropContent").hide(); //hide any open .dropContent element
+  }
+}
